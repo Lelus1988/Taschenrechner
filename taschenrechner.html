@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taschenrechner</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="mode">
+      <button id="modeSwitch">🌙</button>
+    </div>
+    <div class="screen">
+      <input type="text" id="display" readonly />
+    </div>
+    <div class="grid">
+      <button class="key op" data-v="C">C</button>
+      <button class="key op" data-v="DEL">DEL</button>
+      <button class="key op" data-v="%">%</button>
+      <button class="key op" data-v="/">÷</button>
+
+      <button class="key" data-v="7">7</button>
+      <button class="key" data-v="8">8</button>
+      <button class="key" data-v="9">9</button>
+      <button class="key op" data-v="*">×</button>
+
+      <button class="key" data-v="4">4</button>
+      <button class="key" data-v="5">5</button>
+      <button class="key" data-v="6">6</button>
+      <button class="key op" data-v="-">−</button>
+
+      <button class="key" data-v="1">1</button>
+      <button class="key" data-v="2">2</button>
+      <button class="key" data-v="3">3</button>
+      <button class="key op" data-v="+">+</button>
+
+      <button class="key" data-v="00">00</button>
+      <button class="key" data-v="0">0</button>
+      <button class="key" data-v=".">.</button>
+      <button class="key eq" data-v="=">=</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      overflow: hidden;
+      transition: background 0.4s ease;
+    }
+
+    .wrapper {
+      background: #fff;
+      border-radius: 25px;
+      padding: 25px;
+      width: 340px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      position: relative;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .mode {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .mode button {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .mode button:hover {
+      transform: rotate(20deg);
+    }
+
+    .screen {
+      margin-bottom: 20px;
+    }
+
+    .screen input {
+      width: 100%;
+      padding: 22px;
+      font-size: 2.1rem;
+      text-align: right;
+      background: #f0f0f0;
+      color: #333;
+      border: none;
+      border-radius: 12px;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .key {
+      padding: 20px;
+      font-size: 1.3rem;
+      border: none;
+      border-radius: 14px;
+      background: #f7f7f7;
+      color: #333;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .key:hover {
+      background: #dfe6e9;
+      transform: scale(1.05);
+    }
+
+    .op {
+      background: #f39c12;
+      color: white;
+    }
+
+    .op:hover {
+      background: #e67e22;
+    }
+
+    .eq {
+      background: #27ae60;
+      color: white;
+    }
+
+    .eq:hover {
+      background: #2ecc71;
+    }
+
+    .pulse {
+      animation: pulseAnim 0.3s ease;
+    }
+
+    @keyframes pulseAnim {
+      from { transform: scale(1.1); }
+      to { transform: scale(1); }
+    }
+
+    body.dark {
+      background: linear-gradient(135deg, #1e1e1e, #343434);
+    }
+
+    body.dark .wrapper {
+      background: #222;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    body.dark .screen input {
+      background: #111;
+      color: #fff;
+    }
+
+    body.dark .key {
+      background: #2c2c2c;
+      color: #eee;
+    }
+
+    body.dark .key:hover {
+      background: #3c3c3c;
+    }
+
+    body.dark .op {
+      background: #e67e22;
+    }
+
+    body.dark .eq {
+      background: #2ecc71;
+    }
+
+    .ripple {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ripple::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      background: rgba(255,255,255,0.5);
+      animation: ripple-effect 0.6s linear;
+    }
+
+    @keyframes ripple-effect {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
